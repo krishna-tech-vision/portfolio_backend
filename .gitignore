@@ -1,0 +1,8 @@
+# Dependencies
+node_modules/
+
+# Environmental variable  
+.env
+
+# Test
+test.js
