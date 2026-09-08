@@ -13,6 +13,20 @@ app.use(express.json());
 
 app.use("/api", contactRoutes);
 
+app.get("/", async (req, res) => {
+  try {
+    res.status(200).json({
+      sucess: true,
+      message: "Serving is running",
+    });
+  } catch (error) {
+    res.status(500).json({
+      sucess: false,
+      error: "Server error",
+    });
+  }
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
