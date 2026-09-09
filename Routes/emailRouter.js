@@ -50,7 +50,7 @@ ${message}
 
     res.status(500).json({
       sucess: false,
-      error: "Server error!",
+      error: error.message,
     });
   }
 });
